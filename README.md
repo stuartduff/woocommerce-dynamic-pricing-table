@@ -1,6 +1,9 @@
 # WooCommerce Dynamic Pricing Table
 Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
 
+![Image of Pricing Table](http://i.imgur.com/KbTxVCb.png)
+
+
 ## Installation
 
 1. Download the plugin from it's GitHub Repository Download [WooCommerce Dynamic Pricing Table](https://github.com/stuartduff/woocommerce-dynamic-pricing-table).
