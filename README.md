@@ -24,7 +24,7 @@ The extension will display [Advanced Product Discounts](https://docs.woothemes.c
 
 > Are there any limitations to how many product tables will display on an single product.
 
-Yes, only one pricing group will display on any single product if you have more than one pricing group active on a single product the discount table will then be disabled.
+Only one pricing group table will display on any single product, if you have more than one pricing group active on a single product the discount table will then be disabled.
 
 > Where should I contact if I have an issue with this extension.
 
