@@ -75,9 +75,9 @@ final class WC_Dynamic_Pricing_Table {
 
 		register_activation_hook( __FILE__, array( $this, 'install' ) );
 
-    add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
+		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
-    add_action( 'init', array( $this, 'plugin_setup' ) );
+		add_action( 'init', array( $this, 'plugin_setup' ) );
 
 	}
 
