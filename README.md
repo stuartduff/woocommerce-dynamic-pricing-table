@@ -26,6 +26,10 @@ The extension will display [Advanced Product Discounts](https://docs.woothemes.c
 
 Yes, only one pricing group will display on any single product if you have more than one pricing group active on a single product the discount table will then be disabled.
 
+> Where should I contact if I have an issue with this extension.
+
+All support requests for this extension should be posted to the [WooCommerce Dynamic Pricing Table Issue Tracker ](https://github.com/stuartduff/woocommerce-dynamic-pricing-table/issues) here on Github.
+
 ## Changelog
 
 **1.0.0 - 20/06/16**
