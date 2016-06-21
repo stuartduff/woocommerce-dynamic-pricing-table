@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name:				WooCommerce Dynamic Pricing Table
- * Plugin URI:				https://github.com/stuartduff/woocommerce-dynamic-pricing-table
- * Description:				Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts via the WooCommerce Dynamic Pricing plugin.
- * Version:				  	1.0.0
- * Author:				  	Stuart Duff
- * Author URI:				http://stuartduff.com
- * Requires at least:	4.5.2
- * Tested up to:			4.5.0
+ * Plugin Name:       WooCommerce Dynamic Pricing Table
+ * Plugin URI:        https://github.com/stuartduff/woocommerce-dynamic-pricing-table
+ * Description:       Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts via the WooCommerce Dynamic Pricing plugin.
+ * Version:           1.0.0
+ * Author:            Stuart Duff
+ * Author URI:        http://stuartduff.com
+ * Requires at least: 4.5.2
+ * Tested up to:      4.5.0
  *
  * Text Domain: woocommerce-dynamic-pricing-table
  * Domain Path: /languages/
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @return object WC_Dynamic_Pricing_Table
  */
 function WC_Dynamic_Pricing_Table() {
-	return WC_Dynamic_Pricing_Table::instance();
+  return WC_Dynamic_Pricing_Table::instance();
 } // End WC_Dynamic_Pricing_Table()
 WC_Dynamic_Pricing_Table();
 
@@ -37,13 +37,13 @@ WC_Dynamic_Pricing_Table();
  */
 final class WC_Dynamic_Pricing_Table {
 
-	/**
-	 * WC_Dynamic_Pricing_Table The single instance of WC_Dynamic_Pricing_Table.
-	 * @var 	object
-	 * @access  private
-	 * @since 	1.0.0
-	 */
-	private static $_instance = null;
+  /**
+   * WC_Dynamic_Pricing_Table The single instance of WC_Dynamic_Pricing_Table.
+   * @var 	object
+   * @access  private
+   * @since 	1.0.0
+   */
+  private static $_instance = null;
 
 	/**
 	 * The token.
@@ -53,234 +53,236 @@ final class WC_Dynamic_Pricing_Table {
 	 */
 	public $token;
 
-	/**
-	 * The version number.
-	 * @var     string
-	 * @access  public
-	 * @since   1.0.0
-	 */
-	public $version;
+  /**
+   * The version number.
+   * @var     string
+   * @access  public
+   * @since   1.0.0
+   */
+  public $version;
 
-	/**
-	 * Constructor function.
-	 * @access  public
-	 * @since   1.0.0
-	 * @return  void
-	 */
-	public function __construct() {
-		$this->token 			    = 'woocommerce-dynamic-pricing-table';
-		$this->plugin_url 		= plugin_dir_url( __FILE__ );
-		$this->plugin_path 		= plugin_dir_path( __FILE__ );
-		$this->version 			  = '1.0.0';
+  /**
+   * Constructor function.
+   * @access  public
+   * @since   1.0.0
+   * @return  void
+   */
+  public function __construct() {
+    $this->token          = 'woocommerce-dynamic-pricing-table';
+    $this->plugin_url     = plugin_dir_url( __FILE__ );
+    $this->plugin_path    = plugin_dir_path( __FILE__ );
+    $this->version        = '1.0.0';
 
-		register_activation_hook( __FILE__, array( $this, 'install' ) );
+    register_activation_hook( __FILE__, array( $this, 'install' ) );
 
-		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
+    add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
-		add_action( 'init', array( $this, 'plugin_setup' ) );
+    add_action( 'init', array( $this, 'plugin_setup' ) );
 
-	}
+  }
 
-	/**
-	 * Main WC_Dynamic_Pricing_Table Instance
-	 *
-	 * Ensures only one instance of WC_Dynamic_Pricing_Table is loaded or can be loaded.
-	 *
-	 * @since 1.0.0
-	 * @static
-	 * @see WC_Dynamic_Pricing_Table()
-	 * @return Main WC_Dynamic_Pricing_Table instance
-	 */
-	public static function instance() {
-		if ( is_null( self::$_instance ) )
-			self::$_instance = new self();
-		return self::$_instance;
-	} // End instance()
+  /**
+   * Main WC_Dynamic_Pricing_Table Instance
+   *
+   * Ensures only one instance of WC_Dynamic_Pricing_Table is loaded or can be loaded.
+   *
+   * @since 1.0.0
+   * @static
+   * @see WC_Dynamic_Pricing_Table()
+   * @return Main WC_Dynamic_Pricing_Table instance
+   */
+  public static function instance() {
+    if ( is_null( self::$_instance ) )
+      self::$_instance = new self();
+    return self::$_instance;
+  } // End instance()
 
-	/**
-	 * Load the localisation file.
-	 * @access  public
-	 * @since   1.0.0
-	 * @return  void
-	 */
-	public function load_plugin_textdomain() {
-		load_plugin_textdomain( 'woocommerce-dynamic-pricing-table', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	}
+  /**
+   * Load the localisation file.
+   * @access  public
+   * @since   1.0.0
+   * @return  void
+   */
+  public function load_plugin_textdomain() {
+    load_plugin_textdomain( 'woocommerce-dynamic-pricing-table', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+  }
 
-	/**
-	 * Installation.
-	 * Runs on activation. Logs the version number.
-	 * @access  public
-	 * @since   1.0.0
-	 * @return  void
-	 */
-	public function install() {
-		$this->log_plugin_version_number();
-	}
+  /**
+   * Installation.
+   * Runs on activation. Logs the version number.
+   * @access  public
+   * @since   1.0.0
+   * @return  void
+   */
+  public function install() {
+    $this->log_plugin_version_number();
+  }
 
-	/**
-	 * Log the plugin version number.
-	 * @access  private
-	 * @since   1.0.0
-	 * @return  void
-	 */
-	private function log_plugin_version_number() {
-		// Log the version number.
-		update_option( $this->token . '-version', $this->version );
-	}
+  /**
+   * Log the plugin version number.
+   * @access  private
+   * @since   1.0.0
+   * @return  void
+   */
+  private function log_plugin_version_number() {
+    // Log the version number.
+    update_option( $this->token . '-version', $this->version );
+  }
 
-	/**
-	 * Setup all the things.
-	 * Only executes if WooCommerce Dynamic Pricing is active.
-	 * If WooCommerce Dynamic Pricing is inactive an admin notice is displayed.
-	 * @return void
-	 */
-	public function plugin_setup() {
-		if ( class_exists( 'WC_Dynamic_Pricing' ) ) {
-			add_action( 'woocommerce_before_add_to_cart_button', array( $this, 'output_dynamic_pricing_table' ) );
-		} else {
-			add_action( 'admin_notices', array( $this, 'install_wc_dynamic_pricing_notice' ) );
-		}
-	}
+  /**
+   * Setup all the things.
+   * Only executes if WooCommerce Dynamic Pricing is active.
+   * If WooCommerce Dynamic Pricing is inactive an admin notice is displayed.
+   * @return void
+   */
+  public function plugin_setup() {
+    if ( class_exists( 'WC_Dynamic_Pricing' ) ) {
+      add_action( 'woocommerce_before_add_to_cart_button', array( $this, 'output_dynamic_pricing_table' ) );
+    } else {
+      add_action( 'admin_notices', array( $this, 'install_wc_dynamic_pricing_notice' ) );
+    }
+  }
 
-	/**
-	 * WooCommerce Dynamic Pricing plugin install notice.
-	 * If the user activates this plugin while not having the WooCommerce Dynamic Pricing plugin installed or activated, prompt them to install WooCommerce Dynamic Pricing.
-	 * @since   1.0.0
-	 * @return  void
-	 */
-	public function install_wc_dynamic_pricing_notice() {
-		echo '<div class="notice is-dismissible updated">
-			<p>' . __( 'The WooCommerce Dynamic Pricing Table extension requires that you have the WooCommerce Dynamic Pricing plugin installed and activated.', 'woocommerce-dynamic-pricing-table' ) . ' <a href="https://www.woothemes.com/products/dynamic-pricing/">' . __( 'Get WooCommerce Dynamic Pricing now', 'woocommerce-dynamic-pricing-table' ) . '</a></p>
-		</div>';
-	}
+  /**
+   * WooCommerce Dynamic Pricing plugin install notice.
+   * If the user activates this plugin while not having the WooCommerce Dynamic Pricing plugin installed or activated, prompt them to install WooCommerce Dynamic Pricing.
+   * @since   1.0.0
+   * @return  void
+   */
+  public function install_wc_dynamic_pricing_notice() {
+    echo '<div class="notice is-dismissible updated">
+      <p>' . __( 'The WooCommerce Dynamic Pricing Table extension requires that you have the WooCommerce Dynamic Pricing plugin installed and activated.', 'woocommerce-dynamic-pricing-table' ) . ' <a href="https://www.woothemes.com/products/dynamic-pricing/">' . __( 'Get WooCommerce Dynamic Pricing now', 'woocommerce-dynamic-pricing-table' ) . '</a></p>
+    </div>';
+  }
 
-	/**
-	 * Gets the dynamic pricing rules sets from the post meta.
-	 * @access  public
-	 * @since   1.0.0
-	 * @return  get_post_meta()
-	 */
-	public function get_pricing_array_rule_sets() {
-		return get_post_meta( get_the_ID(), '_pricing_rules', true );
-	}
+  /**
+   * Gets the dynamic pricing rules sets from the post meta.
+   * @access  public
+   * @since   1.0.0
+   * @return  get_post_meta()
+   */
+  public function get_pricing_array_rule_sets() {
+    return get_post_meta( get_the_ID(), '_pricing_rules', true );
+  }
 
-	/**
-	 * Outputs the dynamic bulk pricing table.
-	 * @access  public
-	 * @since   1.0.0
-	 * @return  $output
-	 */
-	public function bulk_pricing_table_output() {
+  /**
+   * Outputs the dynamic bulk pricing table.
+   * @access  public
+   * @since   1.0.0
+   * @return  $output
+   */
+  public function bulk_pricing_table_output() {
 
-		$array_rule_sets = $this->get_pricing_array_rule_sets();
+    $array_rule_sets = $this->get_pricing_array_rule_sets();
 
-		$output = '<table>';
+    $output = '<table>';
 
-		$output .= '<th>' . __( 'Quantity' , 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Bulk Purchase Pricing' , 'woocommerce-dynamic-pricing-table' ) . '</th>';
+    $output .= '<th>' . __( 'Quantity' , 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Bulk Purchase Pricing' , 'woocommerce-dynamic-pricing-table' ) . '</th>';
 
-		foreach( $array_rule_sets as $pricing_rule_sets ) {
+    foreach( $array_rule_sets as $pricing_rule_sets ) {
 
-			foreach ( $pricing_rule_sets['rules'] as $key => $value ) {
+      foreach ( $pricing_rule_sets['rules'] as $key => $value ) {
 
-				$output .= '<tr>';
+        $output .= '<tr>';
 
-				$output .= '<td>' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] ) . '</td>';
+        $output .= '<td>' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] ) . '</td>';
 
-				switch ( $pricing_rule_sets['rules'][$key]['type'] ) {
+        switch ( $pricing_rule_sets['rules'][$key]['type'] ) {
 
-					case 'price_discount':
-						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-					break;
+          case 'price_discount':
+            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+          break;
 
-					case 'percentage_discount':
-						$output .= '<td><span class="amount">' . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-					break;
+          case 'percentage_discount':
+            $output .= '<td><span class="amount">' . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+          break;
 
-					case 'fixed_price':
-						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-					break;
+          case 'fixed_price':
+            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+          break;
 
-				}
+        }
 
-				$output .= '</tr>';
-			}
-		}
+        $output .= '</tr>';
 
-		$output .= '</table>';
+      }
 
-		echo $output;
+    }
 
-	}
+    $output .= '</table>';
 
-	/**
-	 * Outputs the dynamic special offer pricing table.
-	 * @access  public
-	 * @since   1.0.0
-	 * @return  $output
-	 */
-	public function special_offer_pricing_table_output() {
+    echo $output;
 
-		$array_rule_sets = $this->get_pricing_array_rule_sets();
+  }
 
-		$output = '<table>';
+  /**
+   * Outputs the dynamic special offer pricing table.
+   * @access  public
+   * @since   1.0.0
+   * @return  $output
+   */
+  public function special_offer_pricing_table_output() {
 
-		$output .= '<th>' . __( 'Quantity', 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Special Offer Pricing', 'woocommerce-dynamic-pricing-table' ) . '</th>';
+    $array_rule_sets = $this->get_pricing_array_rule_sets();
 
-		foreach( $array_rule_sets as $pricing_rule_sets ) {
+    $output = '<table>';
 
-			foreach ( $pricing_rule_sets['blockrules'] as $key => $value ) {
+    $output .= '<th>' . __( 'Quantity', 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Special Offer Pricing', 'woocommerce-dynamic-pricing-table' ) . '</th>';
 
-				$output .= '<tr>';
+    foreach( $array_rule_sets as $pricing_rule_sets ) {
 
-				$output .= '<td>' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ) , intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</td>';
+      foreach ( $pricing_rule_sets['blockrules'] as $key => $value ) {
 
-				switch ( $pricing_rule_sets['blockrules'][$key]['type'] ) {
+        $output .= '<tr>';
 
-					case 'fixed_adjustment':
-						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-					break;
+        $output .= '<td>' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ) , intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</td>';
 
-					case 'percent_adjustment':
-						$output .= '<td><span class="amount">' . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-					break;
+        switch ( $pricing_rule_sets['blockrules'][$key]['type'] ) {
 
-					case 'fixed_price':
-						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-					break;
+          case 'fixed_adjustment':
+            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+          break;
 
-				}
+          case 'percent_adjustment':
+            $output .= '<td><span class="amount">' . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+          break;
 
-				$output .= '</tr>';
+          case 'fixed_price':
+            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+          break;
 
-			}
+        }
 
-		}
+        $output .= '</tr>';
 
-		$output .= '</table>';
+      }
 
-		echo $output;
+    }
 
-	}
+    $output .= '</table>';
 
-	/**
-	 * Outputs the dynamic pricing table.
-	 * @access  public
-	 * @since   1.0.0
-	 */
-	public function output_dynamic_pricing_table() {
+    echo $output;
 
-		$array_rule_sets = $this->get_pricing_array_rule_sets();
+  }
 
-		if ( $array_rule_sets && is_array( $array_rule_sets ) && sizeof( $array_rule_sets ) == 1 ) {
-			foreach( $array_rule_sets as $pricing_rule_sets ) {
-				if ( $pricing_rule_sets['mode'] == 'continuous' ) :
-					$this->bulk_pricing_table_output();
-				elseif ( $pricing_rule_sets['mode'] == 'block' ) :
-					$this->special_offer_pricing_table_output();
-				endif;
-			}
-		}
-	}
+  /**
+   * Outputs the dynamic pricing table.
+   * @access  public
+   * @since   1.0.0
+   */
+  public function output_dynamic_pricing_table() {
+
+    $array_rule_sets = $this->get_pricing_array_rule_sets();
+
+    if ( $array_rule_sets && is_array( $array_rule_sets ) && sizeof( $array_rule_sets ) == 1 ) {
+      foreach( $array_rule_sets as $pricing_rule_sets ) {
+        if ( $pricing_rule_sets['mode'] == 'continuous' ) :
+          $this->bulk_pricing_table_output();
+        elseif ( $pricing_rule_sets['mode'] == 'block' ) :
+          $this->special_offer_pricing_table_output();
+        endif;
+      }
+    }
+  }
 
 } // End Class
