@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Returns the main instance of WC_Dynamic_Pricing_Table to prevent the need to use globals.
  *
- * @since  1.0.0
- * @return object WC_Dynamic_Pricing_Table
+ * @since   1.0.0
+ * @return  object WC_Dynamic_Pricing_Table
  */
 function WC_Dynamic_Pricing_Table() {
   return WC_Dynamic_Pricing_Table::instance();
@@ -31,17 +31,17 @@ WC_Dynamic_Pricing_Table();
  * Main WC_Dynamic_Pricing_Table Class
  *
  * @class WC_Dynamic_Pricing_Table
- * @version	1.0.0
- * @since 1.0.0
- * @package	WC_Dynamic_Pricing_Table
+ * @version   1.0.0
+ * @since     1.0.0
+ * @package   WC_Dynamic_Pricing_Table
  */
 final class WC_Dynamic_Pricing_Table {
 
   /**
    * WC_Dynamic_Pricing_Table The single instance of WC_Dynamic_Pricing_Table.
-   * @var 	object
+   * @var     object
    * @access  private
-   * @since 	1.0.0
+   * @since   1.0.0
    */
   private static $_instance = null;
 
@@ -86,10 +86,10 @@ final class WC_Dynamic_Pricing_Table {
    *
    * Ensures only one instance of WC_Dynamic_Pricing_Table is loaded or can be loaded.
    *
-   * @since 1.0.0
+   * @since   1.0.0
    * @static
-   * @see WC_Dynamic_Pricing_Table()
-   * @return Main WC_Dynamic_Pricing_Table instance
+   * @see     WC_Dynamic_Pricing_Table()
+   * @return  Main WC_Dynamic_Pricing_Table instance
    */
   public static function instance() {
     if ( is_null( self::$_instance ) )
