@@ -3,7 +3,7 @@ Adds a pricing discount table to WooCommerce products that are offering bulk dis
 
 ## Installation
 
-1. Download the child theme from it's GitHub Repository Download [WooCommerce Dynamic Pricing Table](https://github.com/stuartduff/woocommerce-dynamic-pricing-table).
+1. Download the plugin from it's GitHub Repository Download [WooCommerce Dynamic Pricing Table](https://github.com/stuartduff/woocommerce-dynamic-pricing-table).
 2. Goto WordPress > Appearance > Plugins > Add New.
 3. Click Upload Plugin and Choose File, then select the plugin's .zip file. Click Install Now.
 4. Click Activate to use your new plugin right away.
