@@ -45,13 +45,13 @@ final class WC_Dynamic_Pricing_Table {
    */
   private static $_instance = null;
 
-	/**
-	 * The token.
-	 * @var     string
-	 * @access  public
-	 * @since   1.0.0
-	 */
-	public $token;
+  /**
+   * The token.
+   * @var     string
+   * @access  public
+   * @since   1.0.0
+   */
+  public $token;
 
   /**
    * The version number.
