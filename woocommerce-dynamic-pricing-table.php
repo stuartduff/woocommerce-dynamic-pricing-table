@@ -45,7 +45,7 @@ final class WC_Dynamic_Pricing_Table {
 	 */
 	private static $_instance = null;
 
-  /**
+	/**
 	 * The token.
 	 * @var     string
 	 * @access  public
@@ -97,7 +97,7 @@ final class WC_Dynamic_Pricing_Table {
 		return self::$_instance;
 	} // End instance()
 
-  /**
+	/**
 	 * Load the localisation file.
 	 * @access  public
 	 * @since   1.0.0
@@ -107,7 +107,7 @@ final class WC_Dynamic_Pricing_Table {
 		load_plugin_textdomain( 'woocommerce-dynamic-pricing-table', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
-  /**
+	/**
 	 * Installation.
 	 * Runs on activation. Logs the version number.
 	 * @access  public
@@ -118,7 +118,7 @@ final class WC_Dynamic_Pricing_Table {
 		$this->log_plugin_version_number();
 	}
 
-  /**
+	/**
 	 * Log the plugin version number.
 	 * @access  private
 	 * @since   1.0.0
@@ -129,7 +129,7 @@ final class WC_Dynamic_Pricing_Table {
 		update_option( $this->token . '-version', $this->version );
 	}
 
-  /**
+	/**
 	 * Setup all the things.
 	 * Only executes if WooCommerce Dynamic Pricing is active.
 	 * If WooCommerce Dynamic Pricing is inactive an admin notice is displayed.
@@ -137,13 +137,13 @@ final class WC_Dynamic_Pricing_Table {
 	 */
 	public function plugin_setup() {
 		if ( class_exists( 'WC_Dynamic_Pricing' ) ) {
-      add_action( 'woocommerce_before_add_to_cart_button', array( $this, 'output_dynamic_pricing_table' ) );
+			add_action( 'woocommerce_before_add_to_cart_button', array( $this, 'output_dynamic_pricing_table' ) );
 		} else {
 			add_action( 'admin_notices', array( $this, 'install_wc_dynamic_pricing_notice' ) );
 		}
 	}
 
-  /**
+	/**
 	 * WooCommerce Dynamic Pricing plugin install notice.
 	 * If the user activates this plugin while not having the WooCommerce Dynamic Pricing plugin installed or activated, prompt them to install WooCommerce Dynamic Pricing.
 	 * @since   1.0.0
@@ -151,139 +151,136 @@ final class WC_Dynamic_Pricing_Table {
 	 */
 	public function install_wc_dynamic_pricing_notice() {
 		echo '<div class="notice is-dismissible updated">
-				<p>' . __( 'The WooCommerce Dynamic Pricing Table extension requires that you have the WooCommerce Dynamic Pricing plugin installed and activated.', 'woocommerce-dynamic-pricing-table' ) . ' <a href="https://www.woothemes.com/products/dynamic-pricing/">' . __( 'Get WooCommerce Dynamic Pricing now', 'woocommerce-dynamic-pricing-table' ) . '</a></p>
-			</div>';
+			<p>' . __( 'The WooCommerce Dynamic Pricing Table extension requires that you have the WooCommerce Dynamic Pricing plugin installed and activated.', 'woocommerce-dynamic-pricing-table' ) . ' <a href="https://www.woothemes.com/products/dynamic-pricing/">' . __( 'Get WooCommerce Dynamic Pricing now', 'woocommerce-dynamic-pricing-table' ) . '</a></p>
+		</div>';
 	}
 
-  /**
+	/**
 	 * Gets the dynamic pricing rules sets from the post meta.
 	 * @access  public
 	 * @since   1.0.0
 	 * @return  get_post_meta()
 	 */
-  public function get_pricing_array_rule_sets() {
-    return get_post_meta( get_the_ID(), '_pricing_rules', true );
-  }
+	public function get_pricing_array_rule_sets() {
+		return get_post_meta( get_the_ID(), '_pricing_rules', true );
+	}
 
-  /**
+	/**
 	 * Outputs the dynamic bulk pricing table.
 	 * @access  public
 	 * @since   1.0.0
 	 * @return  $output
 	 */
-  public function bulk_pricing_table_output() {
+	public function bulk_pricing_table_output() {
 
-    $array_rule_sets = $this->get_pricing_array_rule_sets();
+		$array_rule_sets = $this->get_pricing_array_rule_sets();
 
-    $output = '<table>';
+		$output = '<table>';
 
-    $output .= '<th>' . __( 'Quantity' , 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Bulk Purchase Pricing' , 'woocommerce-dynamic-pricing-table' ) . '</th>';
+		$output .= '<th>' . __( 'Quantity' , 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Bulk Purchase Pricing' , 'woocommerce-dynamic-pricing-table' ) . '</th>';
 
-      foreach( $array_rule_sets as $pricing_rule_sets ) {
+		foreach( $array_rule_sets as $pricing_rule_sets ) {
 
-        foreach ( $pricing_rule_sets['rules'] as $key => $value ) {
+			foreach ( $pricing_rule_sets['rules'] as $key => $value ) {
 
-          $output .= '<tr>';
+				$output .= '<tr>';
 
-          $output .= '<td>' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] ) . '</td>';
+				$output .= '<td>' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] ) . '</td>';
 
-          switch ( $pricing_rule_sets['rules'][$key]['type'] ) {
+				switch ( $pricing_rule_sets['rules'][$key]['type'] ) {
 
-            case 'price_discount':
-              $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-            break;
+					case 'price_discount':
+						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+					break;
 
-            case 'percentage_discount':
-              $output .= '<td><span class="amount">' . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-            break;
+					case 'percentage_discount':
+						$output .= '<td><span class="amount">' . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+					break;
 
-            case 'fixed_price':
-              $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-            break;
+					case 'fixed_price':
+						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+					break;
 
-          }
+				}
 
-          $output .= '</tr>';
+				$output .= '</tr>';
+			}
+		}
 
-        }
+		$output .= '</table>';
 
-      }
+		echo $output;
 
-    $output .= '</table>';
+	}
 
-    echo $output;
-
-  }
-
-  /**
+	/**
 	 * Outputs the dynamic special offer pricing table.
 	 * @access  public
 	 * @since   1.0.0
 	 * @return  $output
 	 */
-   public function special_offer_pricing_table_output() {
+	public function special_offer_pricing_table_output() {
 
-     $array_rule_sets = $this->get_pricing_array_rule_sets();
+		$array_rule_sets = $this->get_pricing_array_rule_sets();
 
-     $output = '<table>';
+		$output = '<table>';
 
-     $output .= '<th>' . __( 'Quantity', 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Special Offer Pricing', 'woocommerce-dynamic-pricing-table' ) . '</th>';
+		$output .= '<th>' . __( 'Quantity', 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Special Offer Pricing', 'woocommerce-dynamic-pricing-table' ) . '</th>';
 
-       foreach( $array_rule_sets as $pricing_rule_sets ) {
+		foreach( $array_rule_sets as $pricing_rule_sets ) {
 
-         foreach ( $pricing_rule_sets['blockrules'] as $key => $value ) {
+			foreach ( $pricing_rule_sets['blockrules'] as $key => $value ) {
 
-          $output .= '<tr>';
+				$output .= '<tr>';
 
-					$output .= '<td>' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ) , intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</td>';
+				$output .= '<td>' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ) , intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</td>';
 
-     			switch ( $pricing_rule_sets['blockrules'][$key]['type'] ) {
+				switch ( $pricing_rule_sets['blockrules'][$key]['type'] ) {
 
-            case 'fixed_adjustment':
-              $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-            break;
+					case 'fixed_adjustment':
+						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+					break;
 
-     			  case 'percent_adjustment':
-     			    $output .= '<td><span class="amount">' . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-     			  break;
+					case 'percent_adjustment':
+						$output .= '<td><span class="amount">' . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+					break;
 
-     			  case 'fixed_price':
-               $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
-     			  break;
+					case 'fixed_price':
+						$output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+					break;
 
-     			}
+				}
 
-          $output .= '</tr>';
+				$output .= '</tr>';
 
-     		}
+			}
 
-      }
+		}
 
-    $output .= '</table>';
+		$output .= '</table>';
 
-    echo $output;
+		echo $output;
 
-  }
+	}
 
-  /**
+	/**
 	 * Outputs the dynamic pricing table.
 	 * @access  public
 	 * @since   1.0.0
 	 */
-  public function output_dynamic_pricing_table() {
+	public function output_dynamic_pricing_table() {
 
-  	$array_rule_sets = $this->get_pricing_array_rule_sets();
+		$array_rule_sets = $this->get_pricing_array_rule_sets();
 
-    if ( $array_rule_sets && is_array( $array_rule_sets ) && sizeof( $array_rule_sets ) == 1 ) {
-      foreach( $array_rule_sets as $pricing_rule_sets ) {
-        if ( $pricing_rule_sets['mode'] == 'continuous' ) :
-          $this->bulk_pricing_table_output();
-        elseif ( $pricing_rule_sets['mode'] == 'block' ) :
-          $this->special_offer_pricing_table_output();
-        endif;
-      }
-    }
-
-  }
+		if ( $array_rule_sets && is_array( $array_rule_sets ) && sizeof( $array_rule_sets ) == 1 ) {
+			foreach( $array_rule_sets as $pricing_rule_sets ) {
+				if ( $pricing_rule_sets['mode'] == 'continuous' ) :
+					$this->bulk_pricing_table_output();
+				elseif ( $pricing_rule_sets['mode'] == 'block' ) :
+					$this->special_offer_pricing_table_output();
+				endif;
+			}
+		}
+	}
 
 } // End Class
