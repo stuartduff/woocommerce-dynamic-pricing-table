@@ -16,6 +16,16 @@ Adds a pricing discount table to WooCommerce products that are offering bulk dis
 
 For this extension to function [WooCommerce](https://www.woothemes.com/woocommerce/) and the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) extension must be installed and activated on your WordPress site.
 
+## FAQ
+
+> What type of discounts does the extension display.
+
+The extension will display [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on products that have bulk or special offer discounts applied.
+
+> Are there any limitations to how many product tables will display on an individual product.
+
+Yes, only a single product table will display on any one individual product and if you have more than one advanced product discount on a single product the table will be disabled.
+
 ## Changelog
 
 **1.0.0 - 20/06/16**
