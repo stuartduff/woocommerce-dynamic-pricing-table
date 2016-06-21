@@ -185,20 +185,20 @@ final class WC_Dynamic_Pricing_Table {
 
         $output .= '<tr>';
 
-        $output .= '<td>' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] ) . '</td>';
+        $output .= '<td><span class="discount-quantity">' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] ) . '</span></td>';
 
         switch ( $pricing_rule_sets['rules'][$key]['type'] ) {
 
           case 'price_discount':
-            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
           case 'percentage_discount':
-            $output .= '<td><span class="amount">' . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
           case 'fixed_price':
-            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
         }
@@ -235,20 +235,20 @@ final class WC_Dynamic_Pricing_Table {
 
         $output .= '<tr>';
 
-        $output .= '<td>' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ) , intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</td>';
+        $output .= '<td><span class="discount-quantity">' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ) , intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</span></td>';
 
         switch ( $pricing_rule_sets['blockrules'][$key]['type'] ) {
 
           case 'fixed_adjustment':
-            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Discount Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
           case 'percent_adjustment':
-            $output .= '<td><span class="amount">' . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
           case 'fixed_price':
-            $output .= '<td><span class="amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( ' Price Per Item', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
         }
