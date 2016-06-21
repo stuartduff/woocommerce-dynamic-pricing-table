@@ -1,9 +1,9 @@
 # WooCommerce Dynamic Pricing Table
 Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
 
-![Image of Pricing Table](http://i.imgur.com/KbTxVCb.png)
+**Note:** The extension does not provide styling for the discount table and any table styling must be provided by your theme itself or by CSS you write. The screenshot below is taken from the [WooCommerce Storefront Theme](https://www.woothemes.com/storefront/) which does have table styling on product pages included within the theme.
 
-**Note:** The extension does not provide styling for the discount table and any table styling must be provided by your theme itself or by CSS you write. The screenshot above is taken from the [WooCommerce Storefront Theme](https://www.woothemes.com/storefront/) which does have table styling on product pages included within the theme.
+![Image of Pricing Table](http://i.imgur.com/KbTxVCb.png)
 
 ## Installation
 
