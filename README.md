@@ -22,9 +22,9 @@ For this extension to function [WooCommerce](https://www.woothemes.com/woocommer
 
 The extension will display [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
 
-> Are there any limitations to how many product tables will display on an individual product.
+> Are there any limitations to how many product tables will display on an single product.
 
-Yes, only a single product table will display on any one individual product. If you have more than one pricing group active on a single product the discount table will then be disabled.
+Yes, only one pricing group will display on any single product if you have more than one pricing group active on a single product the discount table will then be disabled.
 
 ## Changelog
 
