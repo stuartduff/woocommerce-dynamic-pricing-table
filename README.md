@@ -14,7 +14,7 @@ Adds a pricing discount table to WooCommerce products that are offering bulk dis
 
 ## Minimum Requirements
 
-For this extension to function [WordPress](https://wordpress.org/), [WooCommerce](https://www.woothemes.com/woocommerce/) and the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) extension must be installed and activated on your WordPress site.
+For this extension to function [WooCommerce](https://www.woothemes.com/woocommerce/) and the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) extension must be installed and activated on your [WordPress](https://wordpress.org/) site.
 
 ## FAQ
 
