@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Dynamic Pricing Table\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri May 27 2016 00:42:02 GMT+0100 (BST)\n"
-"POT-Revision-Date: Tue Jun 21 2016 20:59:41 GMT+0100 (BST)\n"
+"POT-Revision-Date: Wed Jun 22 2016 00:15:48 GMT+0100 (BST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -68,7 +68,8 @@ msgstr ""
 
 #: ../woocommerce-dynamic-pricing-table.php:193 ../woocommerce-dynamic-pricing-
 #: table.php:243
-msgid " Discount Per Item"
+#, php-format
+msgid "%1$s Discount Per Item"
 msgstr ""
 
 #: ../woocommerce-dynamic-pricing-table.php:197 ../woocommerce-dynamic-pricing-
@@ -78,7 +79,8 @@ msgstr ""
 
 #: ../woocommerce-dynamic-pricing-table.php:201 ../woocommerce-dynamic-pricing-
 #: table.php:251
-msgid " Price Per Item"
+#, php-format
+msgid "%1$s Price Per Item"
 msgstr ""
 
 #: ../woocommerce-dynamic-pricing-table.php:230
