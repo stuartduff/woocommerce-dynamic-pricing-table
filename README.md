@@ -14,5 +14,5 @@ For this extension to function the [WooCommerce Dynamic Pricing](https://www.woo
 
 ## Changelog
 
-## 1.0.0 - 20/06/16
+**1.0.0 - 20/06/16**
 * Initial Release - first version of the plugin released.
