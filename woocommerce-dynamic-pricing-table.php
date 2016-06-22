@@ -175,7 +175,7 @@ final class WC_Dynamic_Pricing_Table {
 
     $array_rule_sets = $this->get_pricing_array_rule_sets();
 
-    $output = '<table>';
+    $output = '<table class="dynamic-pricing-table">';
 
     $output .= '<th>' . __( 'Quantity' , 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Bulk Purchase Pricing' , 'woocommerce-dynamic-pricing-table' ) . '</th>';
 
@@ -225,7 +225,7 @@ final class WC_Dynamic_Pricing_Table {
 
     $array_rule_sets = $this->get_pricing_array_rule_sets();
 
-    $output = '<table>';
+    $output = '<table class="dynamic-pricing-table">';
 
     $output .= '<th>' . __( 'Quantity', 'woocommerce-dynamic-pricing-table' ) . '</th><th>' . __( 'Special Offer Pricing', 'woocommerce-dynamic-pricing-table' ) . '</th>';
 
