@@ -1,0 +1,80 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-21 20:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: woocommerce-dynamic-pricing-table.php:154
+msgid ""
+"The WooCommerce Dynamic Pricing Table extension requires that you have the "
+"WooCommerce Dynamic Pricing plugin installed and activated."
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:154
+msgid "Get WooCommerce Dynamic Pricing now"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:180 
+#: woocommerce-dynamic-pricing-table.php:230
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:180
+msgid "Bulk Purchase Pricing"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:193 
+#: woocommerce-dynamic-pricing-table.php:243
+msgid "%1$s Discount Per Item"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:197 
+#: woocommerce-dynamic-pricing-table.php:247
+msgid "% Discount"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:201 
+#: woocommerce-dynamic-pricing-table.php:251
+msgid "%1$s Price Per Item"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:230
+msgid "Special Offer Pricing"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:238
+msgid "Buy %1$s get %2$s more discounted"
+msgstr ""
+
+#. Name of the plugin
+msgid "WooCommerce Dynamic Pricing Table"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Adds a pricing discount table to WooCommerce products that are offering bulk "
+"discounts or special offer discounts via the WooCommerce Dynamic Pricing "
+"plugin."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/stuartduff/woocommerce-dynamic-pricing-table"
+msgstr ""
+
+#. Author of the plugin
+msgid "Stuart Duff"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://stuartduff.com"
+msgstr ""
