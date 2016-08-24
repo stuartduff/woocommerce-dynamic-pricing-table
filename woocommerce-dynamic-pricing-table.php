@@ -183,9 +183,16 @@ final class WC_Dynamic_Pricing_Table {
 
       foreach ( $pricing_rule_sets['rules'] as $key => $value ) {
 
+        // Checks if a product discount group max quantity field is less than 1.
+        if ( $pricing_rule_sets['rules'][$key]['to'] < 1 ){
+          $rules_to = __( ' or more', 'woocommerce-dynamic-pricing-table' );
+        } else {
+          $rules_to = ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] );
+        }
+
         $output .= '<tr>';
 
-        $output .= '<td><span class="discount-quantity">' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . ' - ' . floatval( $pricing_rule_sets['rules'][$key]['to'] ) . '</span></td>';
+        $output .= '<td><span class="discount-quantity">' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . $rules_to . '</span></td>';
 
         switch ( $pricing_rule_sets['rules'][$key]['type'] ) {
 
@@ -235,7 +242,7 @@ final class WC_Dynamic_Pricing_Table {
 
         $output .= '<tr>';
 
-        $output .= '<td><span class="discount-quantity">' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), floatval( $pricing_rule_sets['blockrules'][$key]['from'] ) , intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</span></td>';
+        $output .= '<td><span class="discount-quantity">' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ), intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</span></td>';
 
         switch ( $pricing_rule_sets['blockrules'][$key]['type'] ) {
 

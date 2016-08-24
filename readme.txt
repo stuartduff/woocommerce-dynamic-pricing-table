@@ -24,5 +24,9 @@ For this extension to function [WooCommerce](https://www.woothemes.com/woocommer
 
 == Changelog ==
 
+= 1.0.1 - 25/08/16 =
+* Fix - Changed the monetary number output to use the WooCommerce wc_price() function.
+* Fix - If the max quantity field of a product pricing group is less than 1 or left blank "or more" text will now display instead of a 0.
+
 = 1.0.0 - 20/06/16 =
 * Initial Release - first version of the plugin released.
