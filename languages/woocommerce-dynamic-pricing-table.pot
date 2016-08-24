@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-24 21:04+0000\n"
+"POT-Creation-Date: 2016-08-24 22:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -25,7 +25,7 @@ msgid "Get WooCommerce Dynamic Pricing now"
 msgstr ""
 
 #: woocommerce-dynamic-pricing-table.php:180 
-#: woocommerce-dynamic-pricing-table.php:230
+#: woocommerce-dynamic-pricing-table.php:237
 msgid "Quantity"
 msgstr ""
 
@@ -33,26 +33,30 @@ msgstr ""
 msgid "Bulk Purchase Pricing"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:193 
-#: woocommerce-dynamic-pricing-table.php:243
+#: woocommerce-dynamic-pricing-table.php:188
+msgid " or more"
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:200 
+#: woocommerce-dynamic-pricing-table.php:250
 msgid "%1$s Discount Per Item"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:197 
-#: woocommerce-dynamic-pricing-table.php:247
+#: woocommerce-dynamic-pricing-table.php:204 
+#: woocommerce-dynamic-pricing-table.php:254
 msgid "% Discount"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:201 
-#: woocommerce-dynamic-pricing-table.php:251
+#: woocommerce-dynamic-pricing-table.php:208 
+#: woocommerce-dynamic-pricing-table.php:258
 msgid "%1$s Per Item"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:230
+#: woocommerce-dynamic-pricing-table.php:237
 msgid "Special Offer Pricing"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:238
+#: woocommerce-dynamic-pricing-table.php:245
 msgid "Buy %1$s get %2$s more discounted"
 msgstr ""
 
