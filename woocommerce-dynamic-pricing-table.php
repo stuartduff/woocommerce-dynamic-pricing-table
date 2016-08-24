@@ -198,7 +198,7 @@ final class WC_Dynamic_Pricing_Table {
           break;
 
           case 'fixed_price':
-            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . sprintf( __( '%1$s Price Per Item', 'woocommerce-dynamic-pricing-table' ), floatval( $pricing_rule_sets['rules'][$key]['amount'] ) ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . sprintf( __( '%1$s Per Item', 'woocommerce-dynamic-pricing-table' ), floatval( $pricing_rule_sets['rules'][$key]['amount'] ) ) . '</span></td>';
           break;
 
         }
@@ -248,7 +248,7 @@ final class WC_Dynamic_Pricing_Table {
           break;
 
           case 'fixed_price':
-            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . sprintf( __( '%1$s Price Per Item', 'woocommerce-dynamic-pricing-table' ), floatval( $pricing_rule_sets['blockrules'][$key]['amount'] ) ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . get_woocommerce_currency_symbol() . sprintf( __( '%1$s Per Item', 'woocommerce-dynamic-pricing-table' ), floatval( $pricing_rule_sets['blockrules'][$key]['amount'] ) ) . '</span></td>';
           break;
 
         }
