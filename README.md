@@ -32,6 +32,9 @@ All support requests for this extension should be posted to the [WooCommerce Dyn
 
 ## Changelog
 
+**1.0.2 - 26/08/16**
+* Fix - Changed the quantity number output to use the WooCommerce [wc_stock_amount()](https://docs.woocommerce.com/wc-apidocs/function-wc_stock_amount.html) function.
+
 **1.0.1 - 25/08/16**
 * Fix - Changed the monetary number output to use the WooCommerce [wc_price()](https://docs.woocommerce.com/wc-apidocs/function-wc_price.html) function.
 * Fix - If the max quantity field of a product pricing group is less than 1 or left blank "or more" text will now display instead of a 0.

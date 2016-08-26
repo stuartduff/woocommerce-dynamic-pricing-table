@@ -3,11 +3,11 @@
  * Plugin Name:       WooCommerce Dynamic Pricing Table
  * Plugin URI:        https://github.com/stuartduff/woocommerce-dynamic-pricing-table
  * Description:       Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts via the WooCommerce Dynamic Pricing plugin.
- * Version:           1.0.0
+ * Version:           1.0.2
  * Author:            Stuart Duff
  * Author URI:        http://stuartduff.com
- * Requires at least: 4.5.0
- * Tested up to:      4.5.2
+ * Requires at least: 4.6
+ * Tested up to:      4.6
  *
  * Text Domain: woocommerce-dynamic-pricing-table
  * Domain Path: /languages/
@@ -187,12 +187,12 @@ final class WC_Dynamic_Pricing_Table {
         if ( $pricing_rule_sets['rules'][$key]['to'] < 1 ){
           $rules_to = __( ' or more', 'woocommerce-dynamic-pricing-table' );
         } else {
-          $rules_to = ' - ' . intval( $pricing_rule_sets['rules'][$key]['to'] );
+          $rules_to = ' - ' . wc_stock_amount( $pricing_rule_sets['rules'][$key]['to'] );
         }
 
         $output .= '<tr>';
 
-        $output .= '<td><span class="discount-quantity">' . intval( $pricing_rule_sets['rules'][$key]['from'] ) . $rules_to . '</span></td>';
+        $output .= '<td><span class="discount-quantity">' . wc_stock_amount( $pricing_rule_sets['rules'][$key]['from'] ) . $rules_to . '</span></td>';
 
         switch ( $pricing_rule_sets['rules'][$key]['type'] ) {
 
@@ -201,7 +201,7 @@ final class WC_Dynamic_Pricing_Table {
           break;
 
           case 'percentage_discount':
-            $output .= '<td><span class="discount-amount">' . intval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . floatval( $pricing_rule_sets['rules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
           case 'fixed_price':
@@ -242,7 +242,7 @@ final class WC_Dynamic_Pricing_Table {
 
         $output .= '<tr>';
 
-        $output .= '<td><span class="discount-quantity">' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), intval( $pricing_rule_sets['blockrules'][$key]['from'] ), intval( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</span></td>';
+        $output .= '<td><span class="discount-quantity">' . sprintf( __( 'Buy %1$s get %2$s more discounted', 'woocommerce-dynamic-pricing-table' ), wc_stock_amount( $pricing_rule_sets['blockrules'][$key]['from'] ), wc_stock_amount( $pricing_rule_sets['blockrules'][$key]['adjust'] ) ) . '</span></td>';
 
         switch ( $pricing_rule_sets['blockrules'][$key]['type'] ) {
 
@@ -251,7 +251,7 @@ final class WC_Dynamic_Pricing_Table {
           break;
 
           case 'percent_adjustment':
-            $output .= '<td><span class="discount-amount">' . intval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
+            $output .= '<td><span class="discount-amount">' . floatval( $pricing_rule_sets['blockrules'][$key]['amount'] ) . __( '% Discount', 'woocommerce-dynamic-pricing-table' ) . '</span></td>';
           break;
 
           case 'fixed_price':
