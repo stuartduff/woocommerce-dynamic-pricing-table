@@ -7,7 +7,7 @@ Adds a pricing discount table to WooCommerce products that are offering bulk dis
 
 The extension also adds a notification message on WooCommerce product sections displaying any User Role discounts.
 
-
+![products woodev](https://cloud.githubusercontent.com/assets/1190565/18025016/3e0735be-6c13-11e6-974b-687ffb3fa7ce.png)
 
 ## Installation
 
@@ -26,8 +26,6 @@ For this extension to function [WooCommerce](https://www.woothemes.com/woocommer
 
 * [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
 * [User Role Discount](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) will display on WooCommerce product sections.
-
-
 
 > Are there any limitations to how many product tables will display on an single product.
 
