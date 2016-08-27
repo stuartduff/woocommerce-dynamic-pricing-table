@@ -318,7 +318,7 @@ final class WC_Dynamic_Pricing_Table {
     foreach( $role_pricing_rule_sets as $role_rules ) {
 
       // Gets the discount role of the user and the discount amount.
-      $user_discount_role = $role_rules['conditions'][0]['args']['roles'][0];
+      $user_discount_role   = $role_rules['conditions'][0]['args']['roles'][0];
       $role_discount_amount = $role_rules['rules'][0]['amount'];
 
       if ( is_woocommerce() && $current_user_role === $user_discount_role && null !== $user_discount_role ) {
