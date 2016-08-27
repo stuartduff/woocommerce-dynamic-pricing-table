@@ -20,7 +20,10 @@ For this extension to function [WooCommerce](https://www.woothemes.com/woocommer
 
 > What type of discounts does the extension display.
 
-The extension will display [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
+* [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
+* [User Role Discount](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) will display on WooCommerce product sections.
+
+
 
 > Are there any limitations to how many product tables will display on an single product.
 
