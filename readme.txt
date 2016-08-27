@@ -9,9 +9,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
-
-Adds a pricing discount message on WooCommerce product sections for User Role discounts 
+Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts and user role discount messages to WooCommerce sections via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin. 
 
 == Installation ==
 
