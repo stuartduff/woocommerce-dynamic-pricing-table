@@ -326,11 +326,11 @@ final class WC_Dynamic_Pricing_Table {
         switch ( $role_rules['rules'][0]['type'] ) {
 
           case 'percent_product':
-            $info_message = sprintf( __( 'Welcome back %1$s as an %2$s you will receive a %3$s percent discount on all products', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), floatval( $role_discount_amount ) );
+            $info_message = sprintf( __( 'Welcome back %1$s as a %2$s you will receive a %3$s percent discount on all products', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), floatval( $role_discount_amount ) );
           break;
 
           case 'fixed_product':
-            $info_message = sprintf( __( 'Welcome back %1$s as an %2$s you will receive a %3$s discount on all products', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), wc_price( $role_discount_amount ) );
+            $info_message = sprintf( __( 'Welcome back %1$s as a %2$s you will receive a %3$s discount on all products', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), wc_price( $role_discount_amount ) );
           break;
 
         }

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-27 02:39+0000\n"
+"POT-Creation-Date: 2016-08-27 04:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -62,13 +62,13 @@ msgstr ""
 
 #: woocommerce-dynamic-pricing-table.php:329
 msgid ""
-"Welcome back %1$s as an %2$s you will receive a %3$s percent discount on all "
+"Welcome back %1$s as a %2$s you will receive a %3$s percent discount on all "
 "products"
 msgstr ""
 
 #: woocommerce-dynamic-pricing-table.php:333
 msgid ""
-"Welcome back %1$s as an %2$s you will receive a %3$s discount on all products"
+"Welcome back %1$s as a %2$s you will receive a %3$s discount on all products"
 msgstr ""
 
 #. Name of the plugin
