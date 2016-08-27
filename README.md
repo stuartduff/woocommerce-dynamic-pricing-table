@@ -5,6 +5,10 @@ Adds a pricing discount table to WooCommerce products that are offering bulk dis
 
 ![Image of Pricing Table](http://i.imgur.com/KbTxVCb.png)
 
+The extension also adds a notification message on WooCommerce product sections displaying any User Role discounts.
+
+
+
 ## Installation
 
 1. Download the plugin from it's GitHub Repository Download [WooCommerce Dynamic Pricing Table](https://github.com/stuartduff/woocommerce-dynamic-pricing-table).
