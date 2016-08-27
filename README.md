@@ -32,6 +32,9 @@ All support requests for this extension should be posted to the [WooCommerce Dyn
 
 ## Changelog
 
+**1.0.3 - 27/08/16**
+* Feature - Added the ability to display User Role Pricing discounts on WooCommerce sections.
+
 **1.0.2 - 26/08/16**
 * Fix - Changed the quantity number output to use the WooCommerce [wc_stock_amount()](https://docs.woocommerce.com/wc-apidocs/function-wc_stock_amount.html) function.
 

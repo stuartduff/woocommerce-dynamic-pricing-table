@@ -3,7 +3,7 @@ Contributors: stuartduff
 Tags: ecommerce, e-commerce, store, sales, sell, shop, cart, checkout, storefront
 Requires at least: 4.5
 Tested up to: 4.5.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,6 +23,9 @@ Adds a pricing discount table to WooCommerce products that are offering bulk dis
 For this extension to function [WooCommerce](https://www.woothemes.com/woocommerce/) and the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) extension must be installed and activated on your WordPress site.
 
 == Changelog ==
+
+= 1.0.3 - 27/08/16 =
+* Feature - Added the ability to display User Role Pricing discounts on WooCommerce sections.
 
 = 1.0.2 - 26/08/16 =
 * Fix - Changed the quantity number output to use the WooCommerce [wc_stock_amount()](https://docs.woocommerce.com/wc-apidocs/function-wc_stock_amount.html) function.
