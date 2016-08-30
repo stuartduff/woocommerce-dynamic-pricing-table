@@ -9,8 +9,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Displays a pricing discount table on WooCommerce products, a user role discount message and a simple category discount message when using the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
-
+This extension will add a pricing table and other discount notifications for customers on the frontend of your WooCommerce store when using the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
 == Installation ==
 
 1. Download the plugin from it's GitHub Repository Download [WooCommerce Dynamic Pricing Table](https://github.com/stuartduff/woocommerce-dynamic-pricing-table).
