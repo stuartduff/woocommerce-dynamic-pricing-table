@@ -10,13 +10,13 @@ This extension will add a pricing table and other discount notifications for cus
 
 ## User Role Discount Messages
 
-The extension also adds a notification message on WooCommerce product sections displaying any [User Role](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) discounts.
+[User Role](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) discount notification messages are displayed on the WooCommerce product sections.
 
 ![products woodev](https://cloud.githubusercontent.com/assets/1190565/18025016/3e0735be-6c13-11e6-974b-687ffb3fa7ce.png)
 
 ## Simple Category Discount Messages
 
-The extension also adds a notification message on WooCommerce product category sections displaying any [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) discounts.
+[Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) discount notification messages are displayed on the on WooCommerce product category sections.
 
 ![simple-category-discount](https://cloud.githubusercontent.com/assets/1190565/18104005/05035e2e-6ef1-11e6-8364-088994355b89.png)
 
