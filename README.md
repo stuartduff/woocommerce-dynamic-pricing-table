@@ -1,10 +1,10 @@
 # WooCommerce Dynamic Pricing Table
 
-This extension will add a pricing table and other discount notifications for customers on the frontend of your WooCommerce store when using the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
+This extension will add a pricing table and other discount notifications for customers on the frontend of your WooCommerce store when using the [WooCommerce Dynamic Pricing](https://www.woocommerce.com/products/dynamic-pricing/) plugin.
 
 ## Advanced Product Discount Table
 
-**Note:** The extension does not provide styling for the [Advanced Product Discount](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) table and any table styling must be provided by your theme itself or by CSS you write. The screenshot below is taken from the [WooCommerce Storefront Theme](https://www.woothemes.com/storefront/) which does have table styling on product pages included within the theme.
+**Note:** The extension does not provide styling for the [Advanced Product Discount](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-7) table and any table styling must be provided by your theme itself or by CSS you write. The screenshot below is taken from the [WooCommerce Storefront Theme](https://www.woocommerce.com/storefront/) which does have table styling on product pages included within the theme.
 
 ![mixed percentage and fixed dynamic pricing woodev](https://cloud.githubusercontent.com/assets/1190565/17950726/ea7dff32-6a54-11e6-92f5-e1ca36c4868f.png)
 
@@ -29,13 +29,13 @@ The extension also adds a notification message on WooCommerce product category s
 
 ## Minimum Requirements
 
-For this extension to function [WooCommerce](https://www.woothemes.com/woocommerce/) and the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) extension must be installed and activated on your [WordPress](https://wordpress.org/) site.
+For this extension to function [WooCommerce](https://www.woocommerce.com/) and the [WooCommerce Dynamic Pricing](https://www.woocommerce.com/products/dynamic-pricing/) extension must be installed and activated on your [WordPress](https://wordpress.org/) site.
 
 ## FAQ
 
 > What type of discounts does the extension display.
 
-* [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
+* [Advanced Product Discounts](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
 * [User Role Discount](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) will display on WooCommerce product sections.
 * [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) will display category discounts on WooCommrce product categories.
 

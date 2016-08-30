@@ -9,7 +9,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-This extension will add a pricing table and other discount notifications for customers on the frontend of your WooCommerce store when using the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
+This extension will add a pricing table and other discount notifications for customers on the frontend of your WooCommerce store when using the [WooCommerce Dynamic Pricing](https://www.woocommerce.com/products/dynamic-pricing/) plugin.
 == Installation ==
 
 1. Download the plugin from it's GitHub Repository Download [WooCommerce Dynamic Pricing Table](https://github.com/stuartduff/woocommerce-dynamic-pricing-table).
@@ -19,13 +19,13 @@ This extension will add a pricing table and other discount notifications for cus
 
 == Minimum Requirements ==
 
-For this extension to function [WooCommerce](https://www.woothemes.com/woocommerce/) and the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) extension must be installed and activated on your WordPress site.
+For this extension to function [WooCommerce](https://www.woocommerce.com/) and the [WooCommerce Dynamic Pricing](https://www.woocommerce.com/products/dynamic-pricing/) extension must be installed and activated on your WordPress site.
 
 = FAQ =
 
 Below are the discounts that the plugin will currently display.
 
-* [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
+* [Advanced Product Discounts](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
 * [User Role Discount](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) will display on WooCommerce product sections.
 * [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) will display category discounts on WooCommrce product categories.
 
