@@ -3,7 +3,7 @@
  * Plugin Name:       WooCommerce Dynamic Pricing Table
  * Plugin URI:        https://github.com/stuartduff/woocommerce-dynamic-pricing-table
  * Description:       Displays a pricing discount table on WooCommerce products, a user role discount message and a simple category discount message when using the WooCommerce Dynamic Pricing plugin.
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Stuart Duff
  * Author URI:        http://stuartduff.com
  * Requires at least: 4.6
