@@ -1,5 +1,5 @@
 # WooCommerce Dynamic Pricing Table
-Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts and user role discount messages to WooCommerce sections via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin. 
+Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts and user role discount messages to WooCommerce sections via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
 
 **Note:** The extension does not provide styling for the discount table and any table styling must be provided by your theme itself or by CSS you write. The screenshot below is taken from the [WooCommerce Storefront Theme](https://www.woothemes.com/storefront/) which does have table styling on product pages included within the theme.
 
@@ -26,10 +26,11 @@ For this extension to function [WooCommerce](https://www.woothemes.com/woocommer
 
 * [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
 * [User Role Discount](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) will display on WooCommerce product sections.
+* [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) will display category discounts on WooCommrce product categories.
 
 > Are there any limitations to how many product tables will display on an single product.
 
-Only one pricing group table will display on any single product, if you have more than one pricing group active on a single product the discount table will then be disabled.
+Only one advanced product pricing group table will display on any single product, if you have more than one pricing group active on a single product the discount table will then be disabled.
 
 > Where should I contact if I have an issue with this extension.
 
@@ -37,8 +38,11 @@ All support requests for this extension should be posted to the [WooCommerce Dyn
 
 ## Changelog
 
+**1.0.4 - 30/08/16**
+* Feature - Added the ability to display [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) discounts on WooCommerce categories.
+
 **1.0.3 - 27/08/16**
-* Feature - Added the ability to display User Role Pricing discounts on WooCommerce sections.
+* Feature - Added the ability to display [User Role Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) discounts on WooCommerce sections.
 
 **1.0.2 - 26/08/16**
 * Fix - Changed the quantity number output to use the WooCommerce [wc_stock_amount()](https://docs.woocommerce.com/wc-apidocs/function-wc_stock_amount.html) function.

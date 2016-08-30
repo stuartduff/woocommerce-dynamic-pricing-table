@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-27 04:06+0000\n"
+"POT-Creation-Date: 2016-08-30 19:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,61 +14,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: woocommerce-dynamic-pricing-table.php:155
+#: woocommerce-dynamic-pricing-table.php:156
 msgid ""
 "The WooCommerce Dynamic Pricing Table extension requires that you have the "
 "WooCommerce Dynamic Pricing plugin installed and activated."
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:155
+#: woocommerce-dynamic-pricing-table.php:156
 msgid "Get WooCommerce Dynamic Pricing now"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:191 
-#: woocommerce-dynamic-pricing-table.php:248
+#: woocommerce-dynamic-pricing-table.php:202 
+#: woocommerce-dynamic-pricing-table.php:259
 msgid "Quantity"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:191
+#: woocommerce-dynamic-pricing-table.php:202
 msgid "Bulk Purchase Pricing"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:199
+#: woocommerce-dynamic-pricing-table.php:210
 msgid " or more"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:211 
-#: woocommerce-dynamic-pricing-table.php:261
+#: woocommerce-dynamic-pricing-table.php:222 
+#: woocommerce-dynamic-pricing-table.php:272
 msgid "%1$s Discount Per Item"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:215 
-#: woocommerce-dynamic-pricing-table.php:265
+#: woocommerce-dynamic-pricing-table.php:226 
+#: woocommerce-dynamic-pricing-table.php:276
 msgid "% Discount"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:219 
-#: woocommerce-dynamic-pricing-table.php:269
+#: woocommerce-dynamic-pricing-table.php:230 
+#: woocommerce-dynamic-pricing-table.php:280
 msgid "%1$s Per Item"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:248
+#: woocommerce-dynamic-pricing-table.php:259
 msgid "Special Offer Pricing"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:256
+#: woocommerce-dynamic-pricing-table.php:267
 msgid "Buy %1$s get %2$s more discounted"
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:329
+#: woocommerce-dynamic-pricing-table.php:340
 msgid ""
-"Welcome back %1$s as a %2$s you will receive a %3$s percent discount on all "
-"products"
+"Hi %1$s as a %2$s you will receive a %3$s percent discount on all products."
 msgstr ""
 
-#: woocommerce-dynamic-pricing-table.php:333
+#: woocommerce-dynamic-pricing-table.php:344
+msgid "Hi %1$s as a %2$s you will receive a %3$s discount on all products."
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:390
 msgid ""
-"Welcome back %1$s as a %2$s you will receive a %3$s discount on all products"
+"You will receive a %1$s percent discount on all products within the %2$s "
+"category."
+msgstr ""
+
+#: woocommerce-dynamic-pricing-table.php:394
+msgid ""
+"You will receive %1$s discount on all products within the %2$s category."
 msgstr ""
 
 #. Name of the plugin

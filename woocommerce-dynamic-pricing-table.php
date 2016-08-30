@@ -139,6 +139,7 @@ final class WC_Dynamic_Pricing_Table {
     if ( class_exists( 'WC_Dynamic_Pricing' ) ) {
       add_action( 'woocommerce_before_add_to_cart_button', array( $this, 'output_dynamic_pricing_table' ) );
       add_action( 'wp', array( $this, 'output_dynamic_pricing_role_message' ) );
+      add_action( 'wp', array( $this, 'output_dynamic_pricing_category_message' ) );
     } else {
       add_action( 'admin_notices', array( $this, 'install_wc_dynamic_pricing_notice' ) );
     }
@@ -174,6 +175,16 @@ final class WC_Dynamic_Pricing_Table {
    */
   public function get_current_user() {
     return wp_get_current_user();
+  }
+
+  /**
+   * Gets the current category.
+   * @access  public
+   * @since   1.0.0
+   * @return  get_queiried object()
+   */
+  public function pricing_queried_object() {
+    return get_queried_object();
   }
 
   /**
@@ -326,11 +337,11 @@ final class WC_Dynamic_Pricing_Table {
         switch ( $role_rules['rules'][0]['type'] ) {
 
           case 'percent_product':
-            $info_message = sprintf( __( 'Welcome back %1$s as a %2$s you will receive a %3$s percent discount on all products', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), floatval( $role_discount_amount ) );
+            $info_message = sprintf( __( 'Hi %1$s as a %2$s you will receive a %3$s percent discount on all products.', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), floatval( $role_discount_amount ) );
           break;
 
           case 'fixed_product':
-            $info_message = sprintf( __( 'Welcome back %1$s as a %2$s you will receive a %3$s discount on all products', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), wc_price( $role_discount_amount ) );
+            $info_message = sprintf( __( 'Hi %1$s as a %2$s you will receive a %3$s discount on all products.', 'woocommerce-dynamic-pricing-table' ), esc_attr( $current_user_display_name ), esc_attr( $current_user_role ), wc_price( $role_discount_amount ) );
           break;
 
         }
@@ -350,6 +361,56 @@ final class WC_Dynamic_Pricing_Table {
    */
   public function output_dynamic_pricing_role_message() {
     $this->role_discount_notification_message();
+  }
+
+  /**
+   * The category discount notification message.
+   * @access  public
+   * @since   1.0.0
+   * @return  wc_add_notice()
+   */
+  public function category_discount_notification_message() {
+
+    $category_pricing_rule_sets = get_option( '_s_category_pricing_rules', array() );
+    $current_product_category   = $this->pricing_queried_object()->term_id;
+    $current_category_name      = $this->pricing_queried_object()->name;
+
+    foreach( $category_pricing_rule_sets as $category_rules ) {
+
+      // Gets the discount category and the discount amount set for the category.
+      $discount_category        = $category_rules['collector']['args']['cats'][0];
+      $category_discount_amount = $category_rules['rules'][0]['amount'];
+
+
+      if ( is_product_category() && $current_product_category == $discount_category && null != $discount_category ) {
+
+        switch ( $category_rules['rules'][0]['type'] ) {
+
+          case 'percent_product':
+            $info_message = sprintf( __( 'You will receive a %1$s percent discount on all products within the %2$s category.', 'woocommerce-dynamic-pricing-table' ), floatval( $category_discount_amount ), esc_attr( $current_category_name ) );
+          break;
+
+          case 'fixed_product':
+            $info_message = sprintf( __( 'You will receive %1$s discount on all products within the %2$s category.', 'woocommerce-dynamic-pricing-table' ), wc_price( $category_discount_amount ), esc_attr( $current_category_name ) );
+          break;
+
+        }
+
+      }
+
+    }
+
+    wc_add_notice( $info_message, 'notice' );
+
+  }
+
+  /**
+   * Outputs the category notificaton message.
+   * @access  public
+   * @since   1.0.0
+   */
+  public function output_dynamic_pricing_category_message() {
+    $this->category_discount_notification_message();
   }
 
 } // End Class

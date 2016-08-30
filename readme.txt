@@ -3,13 +3,13 @@ Contributors: stuartduff
 Tags: ecommerce, e-commerce, store, sales, sell, shop, cart, checkout, storefront
 Requires at least: 4.5
 Tested up to: 4.5.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts and user role discount messages to WooCommerce sections via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin. 
+Adds a pricing discount table to WooCommerce products that are offering bulk discounts or special offer discounts and user role discount messages to WooCommerce sections via the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) plugin.
 
 == Installation ==
 
@@ -22,7 +22,18 @@ Adds a pricing discount table to WooCommerce products that are offering bulk dis
 
 For this extension to function [WooCommerce](https://www.woothemes.com/woocommerce/) and the [WooCommerce Dynamic Pricing](https://www.woothemes.com/products/dynamic-pricing/) extension must be installed and activated on your WordPress site.
 
+= FAQ =
+
+Below are the discounts that the plugin will currently display.
+
+* [Advanced Product Discounts](https://docs.woothemes.com/document/woocommerce-dynamic-pricing/#section-7) on WooCommerce products that have either a bulk or special offer discount applied to them.
+* [User Role Discount](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-2) will display on WooCommerce product sections.
+* [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) will display category discounts on WooCommrce product categories.
+
 == Changelog ==
+
+= 1.0.4 - 30/08/16 =
+* Feature - Added the ability to display Simple Category Pricing discounts on WooCommerce categories.
 
 = 1.0.3 - 27/08/16 =
 * Feature - Added the ability to display User Role Pricing discounts on WooCommerce sections.
