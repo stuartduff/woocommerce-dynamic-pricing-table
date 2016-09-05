@@ -49,6 +49,9 @@ All support requests for this extension should be posted to the [WooCommerce Dyn
 
 ## Changelog
 
+**1.0.5 - 05/09/16**
+* Fix - Added check to prevent wc_add_notice() from trying to display on admin.
+
 **1.0.4 - 30/08/16**
 * Feature - Added the ability to display [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) discounts on WooCommerce categories.
 

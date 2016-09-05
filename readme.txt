@@ -3,7 +3,7 @@ Contributors: stuartduff
 Tags: ecommerce, e-commerce, store, sales, sell, shop, cart, checkout, storefront
 Requires at least: 4.5
 Tested up to: 4.5.2
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,6 +30,9 @@ Below are the discounts that the plugin will currently display.
 * [Simple Category Pricing](https://docs.woocommerce.com/document/woocommerce-dynamic-pricing/#section-4) will display category discounts on WooCommrce product categories.
 
 == Changelog ==
+
+= 1.0.5 - 05/09/16 =
+* Fix - Added check to prevent wc_add_notice() from trying to display on admin.
 
 = 1.0.4 - 30/08/16 =
 * Feature - Added the ability to display Simple Category Pricing discounts on WooCommerce categories.
