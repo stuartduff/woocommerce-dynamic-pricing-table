@@ -352,9 +352,9 @@ final class WC_Dynamic_Pricing_Table {
       }
 
     }
-
-    wc_add_notice( $info_message, 'notice' );
-
+    if(isset($info_message)) {
+      wc_add_notice( $info_message, 'notice' );
+    }
   }
 
   /**
@@ -402,9 +402,9 @@ final class WC_Dynamic_Pricing_Table {
       }
 
     }
-
-    wc_add_notice( $info_message, 'notice' );
-
+    if(isset($info_message)) {
+      wc_add_notice( $info_message, 'notice' );
+    }
   }
 
   /**
