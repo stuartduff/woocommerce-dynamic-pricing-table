@@ -3,14 +3,17 @@
  * Plugin Name:       WooCommerce Dynamic Pricing Table
  * Plugin URI:        https://github.com/stuartduff/woocommerce-dynamic-pricing-table
  * Description:       Displays a pricing discount table on WooCommerce products, a user role discount message and a simple category discount message when using the WooCommerce Dynamic Pricing plugin.
- * Version:           1.0.5
+ * Version:           1.0.6
  * Author:            Stuart Duff
  * Author URI:        http://stuartduff.com
- * Requires at least: 4.6
- * Tested up to:      4.6
+ * Requires at least: 5.3
+ * Tested up to:      5.3
  *
  * Text Domain: woocommerce-dynamic-pricing-table
  * Domain Path: /languages/
+ *
+ * WC requires at least: 3.9
+ * WC tested up to: 4.0
  *
  * @package WC_Dynamic_Pricing_Table
  */
@@ -332,7 +335,7 @@ final class WC_Dynamic_Pricing_Table {
     foreach( $role_pricing_rule_sets as $role_rules ) {
 
       // Gets the discount role of the user and the discount amount.
-      $user_discount_role   = $role_rules['conditions'][0]['args']['roles'][0];
+      $user_discount_role   = isset( $role_rules['conditions'][0]['args']['roles'][0] ) ? $role_rules['conditions'][0]['args']['roles'][0] : '';
       $role_discount_amount = $role_rules['rules'][0]['amount'];
 
       if ( is_woocommerce() && $current_user_role === $user_discount_role && null !== $user_discount_role ) {
@@ -349,11 +352,12 @@ final class WC_Dynamic_Pricing_Table {
 
         }
 
+          // Output role discount message
+          wc_add_notice( $info_message, 'notice' );
+
       }
 
     }
-
-    wc_add_notice( $info_message, 'notice' );
 
   }
 
@@ -381,7 +385,7 @@ final class WC_Dynamic_Pricing_Table {
     foreach( $category_pricing_rule_sets as $category_rules ) {
 
       // Gets the discount category and the discount amount set for the category.
-      $discount_category        = $category_rules['collector']['args']['cats'][0];
+      $discount_category        = isset( $category_rules['collector']['args']['cats'][0] ) ? $category_rules['collector']['args']['cats'][0] : '';
       $category_discount_amount = $category_rules['rules'][0]['amount'];
 
 
@@ -399,11 +403,12 @@ final class WC_Dynamic_Pricing_Table {
 
         }
 
+          // Output category discount message
+          wc_add_notice( $info_message, 'notice' );
+
       }
 
     }
-
-    wc_add_notice( $info_message, 'notice' );
 
   }
 

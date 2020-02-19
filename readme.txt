@@ -31,6 +31,9 @@ Below are the discounts that the plugin will currently display.
 
 == Changelog ==
 
+= 1.0.6 - 19/02/20 =
+* Fix - Various small fixes to stop error messages from displaying in WooCommerce v3.9+
+
 = 1.0.5 - 05/09/16 =
 * Fix - Added check to prevent wc_add_notice() from trying to display on admin.
 

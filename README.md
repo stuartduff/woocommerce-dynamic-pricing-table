@@ -49,6 +49,9 @@ All support requests for this extension should be posted to the [WooCommerce Dyn
 
 ## Changelog
 
+**1.0.6 - 19/02/20**
+* Fix - Various small fixes to stop error messages from displaying in WooCommerce v3.9+
+
 **1.0.5 - 05/09/16**
 * Fix - Added check to prevent wc_add_notice() from trying to display on admin.
 
